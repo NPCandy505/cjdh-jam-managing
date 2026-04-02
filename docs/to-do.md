@@ -121,12 +121,12 @@ npx create-next-app@latest .
 ```
 
 - [ ] 생성 과정에서 아래 옵션을 선택한다
-- [ ] `TypeScript`: Yes
-- [ ] `ESLint`: Yes
-- [ ] `Tailwind CSS`: Yes
-- [ ] `src/ directory`: Yes 또는 No 중 하나 선택
-- [ ] `App Router`: Yes
-- [ ] `import alias`: 기본값 사용 가능
+- `TypeScript`: Yes
+- `ESLint`: Yes
+- `Tailwind CSS`: Yes
+- `src/ directory`: Yes 또는 No 중 하나 선택
+- `App Router`: Yes
+- `import alias`: 기본값 사용 가능
 
 ### 추천 선택
 
