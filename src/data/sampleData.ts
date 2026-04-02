@@ -32,44 +32,22 @@ export const sampleJamEntries: JamEntry[] = [
 ];
 
 export const sampleEasySongs: EasySong[] = [
-  {
-    id: "1",
-    title: "All of me",
-    artist: "Jazz Standard",
-  },
-  {
-    id: "2",
-    title: "Bye bye blackbird",
-    artist: "Jazz Standard",
-  },
-  {
-    id: "3",
-    title: "Days of wine and roses",
-    artist: "Jazz Standard",
-  },
-  {
-    id: "4",
-    title: "Foggy day",
-    artist: "Jazz Standard",
-  },
-  {
-    id: "5",
-    title: "It could happen to you",
-    artist: "Jazz Standard",
-  },
-  {
-    id: "6",
-    title: "Just friends",
-    artist: "Jazz Standard",
-  },
-  {
-    id: "7",
-    title: "On the sunny side of street",
-    artist: "Jazz Standard",
-  },
-  {
-    id: "8",
-    title: "St. Thomas",
-    artist: "Sonny Rollins",
-  },
+  // Swing
+  { id: "1",  title: "Alice in Wonderland", artist: "Jazz Standard", genre: "swing" },
+  { id: "2",  title: "All of Me",           artist: "Jazz Standard", genre: "swing" },
+  { id: "3",  title: "Autumn Leaves",       artist: "Jazz Standard", genre: "swing" },
+  { id: "4",  title: "Beautiful Love",      artist: "Jazz Standard", genre: "swing" },
+  { id: "5",  title: "Blues",               artist: "Jazz Standard", genre: "swing" },
+  { id: "6",  title: "Fly Me to the Moon",  artist: "Jazz Standard", genre: "swing" },
+  { id: "7",  title: "A Foggy Day",         artist: "Jazz Standard", genre: "swing" },
+  { id: "8",  title: "I Should Care",       artist: "Jazz Standard", genre: "swing" },
+  { id: "9",  title: "Just Friends",        artist: "Jazz Standard", genre: "swing" },
+  { id: "10", title: "Night and Day",       artist: "Jazz Standard", genre: "swing" },
+  { id: "11", title: "Satin Doll",          artist: "Jazz Standard", genre: "swing" },
+  // Bossa Nova
+  { id: "12", title: "Blue Bossa",          artist: "Jazz Standard", genre: "bossa" },
+  { id: "13", title: "So Nice (Summer Samba)", artist: "Marcos Valle", genre: "bossa" },
+  // Funk
+  { id: "14", title: "Sunny",              artist: "Bobby Hebb",    genre: "funk" },
+  { id: "15", title: "Just the Two of Us", artist: "Grover Washington Jr.", genre: "funk" },
 ];

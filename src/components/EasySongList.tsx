@@ -1,7 +1,13 @@
-import { EasySong } from "@/types";
+import { EasySong, Genre } from "@/types";
 
 type Props = {
   songs: EasySong[];
+};
+
+const GENRE_STYLE: Record<Genre, { label: string; className: string }> = {
+  swing: { label: "Swing",  className: "bg-blue-900 text-blue-200 border border-blue-700" },
+  bossa: { label: "Bossa",  className: "bg-green-900 text-green-200 border border-green-700" },
+  funk:  { label: "Funk",   className: "bg-orange-900 text-orange-200 border border-orange-700" },
 };
 
 export default function EasySongList({ songs }: Props) {
@@ -13,34 +19,41 @@ export default function EasySongList({ songs }: Props) {
       </p>
 
       <ul className="flex flex-col gap-3">
-        {songs.map((song) => (
-          <li
-            key={song.id}
-            className="rounded-lg border border-zinc-700 bg-zinc-900 px-4 py-3"
-          >
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-              <div>
+        {songs.map((song) => {
+          const genre = GENRE_STYLE[song.genre];
+          return (
+            <li
+              key={song.id}
+              className="rounded-lg border border-zinc-700 bg-zinc-900 px-4 py-3"
+            >
+              <div className="flex items-center justify-between gap-2">
                 <span className="font-medium text-gray-100 text-sm">
                   {song.title}
                 </span>
-                <span className="text-gray-500 text-sm"> — {song.artist}</span>
+                <div className="flex items-center gap-2 shrink-0">
+                  {song.youtubeUrl && (
+                    <a
+                      href={song.youtubeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-amber-400 underline hover:text-amber-300"
+                    >
+                      유튜브 보기
+                    </a>
+                  )}
+                  <span
+                    className={`text-xs font-semibold px-2 py-0.5 rounded-full ${genre.className}`}
+                  >
+                    {genre.label}
+                  </span>
+                </div>
               </div>
-              {song.youtubeUrl && (
-                <a
-                  href={song.youtubeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-amber-400 underline hover:text-amber-300 shrink-0"
-                >
-                  유튜브 보기
-                </a>
+              {song.memo && (
+                <p className="mt-1 text-xs text-gray-500">{song.memo}</p>
               )}
-            </div>
-            {song.memo && (
-              <p className="mt-1 text-xs text-gray-500">{song.memo}</p>
-            )}
-          </li>
-        ))}
+            </li>
+          );
+        })}
       </ul>
     </section>
   );

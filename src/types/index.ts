@@ -32,11 +32,16 @@ export type JamEntry = {
   createdAt: string;         // 신청 시각 (ISO 8601 문자열)
 };
 
+// easy 곡 장르 고정 목록
+export const GENRE_OPTIONS = ["swing", "bossa", "funk"] as const;
+export type Genre = (typeof GENRE_OPTIONS)[number];
+
 // easy 곡 리스트 항목 하나
 export type EasySong = {
   id: string;
   title: string;             // 곡명
   artist: string;            // 가수명
+  genre: Genre;              // 장르 (swing / bossa / funk)
   youtubeUrl?: string;       // 유튜브 또는 참고 링크 (선택)
   memo?: string;             // 간단 메모 (선택)
 };
