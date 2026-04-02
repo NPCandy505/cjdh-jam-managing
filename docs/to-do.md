@@ -2,7 +2,7 @@
 
 ## 1. 이 문서의 목적
 
-이 문서는 [master-plan.md](c:/Users/Jaehoon/Desktop/Develop/CJDH%20Jam-day/docs/master-plan.md)를 바탕으로,  
+이 문서는 [master-plan.md](./master-plan.md)를 바탕으로,  
 웹사이트 개발을 실제로 시작할 때 해야 할 일을 **순서대로** 정리한 체크리스트다.
 
 목표는 다음과 같다.
@@ -111,8 +111,8 @@ npm -v
 
 ### 할 일
 
-- [ ] 현재 폴더가 비어 있거나 문서만 있는 상태인지 확인한다
-- [ ] Next.js 앱을 생성한다
+- [x] 현재 폴더가 비어 있거나 문서만 있는 상태인지 확인한다
+- [x] Next.js 앱을 생성한다
 
 예시 명령:
 
@@ -120,19 +120,19 @@ npm -v
 npx create-next-app@latest .
 ```
 
-- [ ] 생성 과정에서 아래 옵션을 선택한다
+- [x] 생성 과정에서 아래 옵션을 선택한다
 - `TypeScript`: Yes
 - `ESLint`: Yes
 - `Tailwind CSS`: Yes
-- `src/ directory`: Yes 또는 No 중 하나 선택
+- `src/ directory`: Yes
 - `App Router`: Yes
 - `import alias`: 기본값 사용 가능
 
 ### 추천 선택
 
-- [ ] `src/ directory`: `Yes`
+- [x] `src/ directory`: `Yes`
 초심자에게도 코드 위치가 정리되어 보여서 관리가 쉽다
-- [ ] `App Router`: `Yes`
+- [x] `App Router`: `Yes`
 최신 Next.js 방식이다
 
 ### 초심자 메모
@@ -143,15 +143,15 @@ npx create-next-app@latest .
 
 ### 완료 기준
 
-- [ ] `package.json` 파일이 생긴다
-- [ ] `src/app` 또는 `app` 폴더가 생긴다
-- [ ] 아래 명령으로 개발 서버가 실행된다
+- [x] `package.json` 파일이 생긴다
+- [x] `src/app` 또는 `app` 폴더가 생긴다
+- [x] 아래 명령으로 개발 서버가 실행된다
 
 ```powershell
 npm run dev
 ```
 
-- [ ] 브라우저에서 `http://localhost:3000` 접속 시 기본 Next.js 화면이 뜬다
+- [x] 브라우저에서 `http://localhost:3000` 접속 시 기본 Next.js 화면이 뜬다
 
 ---
 
@@ -191,9 +191,9 @@ prisma/
 
 ### 할 일
 
-- [ ] 기본 생성 파일을 확인한다
+- [x] 기본 생성 파일을 확인한다
 - [ ] 필요 없는 기본 예제 코드를 파악한다
-- [ ] 위 폴더 구조를 만든다
+- [x] 위 폴더 구조를 만든다
 - [ ] `master-plan.md`의 데이터 구조를 참고해 타입 파일 초안을 만든다
 
 ### 완료 기준
@@ -736,3 +736,8 @@ MVP에서는 단순성을 우선하되, 문구로 주의 안내를 주는 편이
 - [ ] 기능 하나를 만들 때마다 바로 실행해서 확인한다
 
 이 문서를 따라가면, 최소한 MVP 기준의 잼 데이 관리 사이트를 단계적으로 구현할 수 있다.
+
+
+
+
+
