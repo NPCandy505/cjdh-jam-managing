@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// 곡 신청 한 건
+model JamEntry {
+  id                     String                 @id @default(cuid())
+  songTitle              String
+  applicantName          String
+  desiredSession         String
+  instrumentName         String?                // "기타 악기" 선택 시 악기명
+  noteUrl                String?
+  createdAt              DateTime               @default(now())
+  additionalParticipants AdditionalParticipant[]
+}
+
+// 추가 참여 멤버 (JamEntry 1 : N)
+model AdditionalParticipant {
+  id             String   @id @default(cuid())
+  name           String
+  session        String
+  instrumentName String?  // "기타 악기" 선택 시 악기명
+  jamEntryId     String
+  jamEntry       JamEntry @relation(fields: [jamEntryId], references: [id], onDelete: Cascade)
+}
+
+// 원클릭 신청 한 건
+model OneClickRequest {
+  id               String   @id @default(cuid())
+  requesterName    String
+  preferredSession String
+  instrumentName   String?  // "기타 악기" 선택 시 악기명
+  memo             String?
+  createdAt        DateTime @default(now())
+}

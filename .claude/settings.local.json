@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import sys,json; lines=[json.loads\\(l\\) for l in sys.stdin if l.strip\\(\\)]; failed=[l for l in lines if l.get\\('tags',{}\\).get\\('failed'\\)]; [print\\(json.dumps\\(f, indent=2\\)\\) for f in failed[:5]]\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(list\\(d.keys\\(\\)\\)\\)\")",
+      "Bash(xargs grep:*)"
+    ]
+  }
+}
